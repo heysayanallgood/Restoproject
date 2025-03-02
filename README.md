@@ -17,22 +17,19 @@ menu = {
     'Spaghetti and Meatballs': 100,
     'Classic Cheeseburger': 70,
     'Mac and Cheese': 60,
-
-    # Meat Alternatives
+#Meat Alternatives
     'Beyond Burger': 80,
     'Impossible Burger': 85,
     'Veggie Burger': 65,
     'Plant-Based Sausages': 75,
-
-    # Herbs and Seasonal Dishes
-    'Turmeric Soup': 50,
-    'Cardamom Coffee': 40,
-    'Ginseng Tea': 45,
-    'Burnet Salad': 55,
-    'Lemon Balm Lemonade': 35,
-
-    # Indian and South Indian Dishes
-    'Tandoori Chicken': 120,
+# Herbs and Seasonal Dishes
+'Turmeric Soup': 50,
+'Cardamom Coffee': 40,
+'Ginseng Tea': 45,
+'Burnet Salad': 55,
+'Lemon Balm Lemonade': 35,
+# Indian and South Indian Dishes
+'Tandoori Chicken': 120,
     'Dosa': 80,
     'Idli': 60,
     'Sambar Vada': 70,
@@ -40,35 +37,34 @@ menu = {
     'Palak Paneer': 100,
     'Biryani': 110,
 
-    # Fusion and Unique Items
-    'Fusion Tacos': 85,
+# Fusion and Unique Items
+'Fusion Tacos': 85,
     'Artisanal Sourdough Pizza': 120,
     'Gourmet Toasts': 60,
     'Elevated Bar Snacks': 75,
     'Ethically-Sourced Salads': 80,
 
-    # Desserts and Drinks
-    'Yuzu Cheesecake': 90,
+# Desserts and Drinks
+'Yuzu Cheesecake': 90,
     'Mocktails': 50,
     'Fresh Fruit Salad': 60,
     'Fermented Drinks': 55,
     'Ice Cream Sundae': 80,
 
-    # Breakfast Items
-    'Pancakes': 60,
+# Breakfast Items
+'Pancakes': 60,
     'Waffles': 65,
     'French Toast': 70,
     'Crepes': 75,
 
-    # More Popular Items
-    'Chicken Wings': 80,
+# More Popular Items
+'Chicken Wings': 80,
     'Fries with Cheese': 50,
     'Chilli Cheese Fries': 55,
     'Garlic Bread': 40,
     'Grilled Cheese Sandwich': 60,
-
-    # Additional Items
-    'Spring Rolls': 70,
+ # Additional Items
+'Spring Rolls': 70,
     'Chilly Paneer Dry': 90,
     'Veg Manchurian Dry': 80,
     'Potatoes in Honey & Chilly': 85,
@@ -173,18 +169,15 @@ def add_to_menu():
 def place_order():
     order_total = 0
     n = int(input("Enter the number of items you want to order: "))
-    
     for i in range(n):
         item_name = input(f"Enter the name of item {i+1} you want: ")
-        
-        # Check if the item is in the menu
+         # Check if the item is in the menu
         if item_name in menu:
             order_total += menu[item_name]
             print(f"You have ordered {item_name}.")
         else:
             print(f"You have ordered {item_name}, but it is not available in our menu.")
-    
-    print(f"\nYour total order is Rs {order_total}.")
+     print(f"\nYour total order is Rs {order_total}.")
 
 # Main program loop
 while True:
@@ -193,9 +186,7 @@ while True:
     print("2. Add to Menu")
     print("3. Place Order")
     print("4. Exit")
-    
     choice = input("Enter your choice: ")
-    
     if choice == "1":
         print_menu()
     elif choice == "2":
